@@ -50,12 +50,53 @@ class B extends A {
     }
 }
 
+
+
+class Person {
+    String name;
+    String id;
+
+    public Person(String name) {
+        this.name = name;
+    }
+}
+
+class Student extends Person {
+    String grade;
+    String department;
+
+    public Student(String name) {
+        super(name);
+    }
+}
+
+
+
 public class superClass {   
     public static void main(String[] args) {
-        ColorPoint cp = new ColorPoint(5, 6, "blue");
-        cp.showColorPoint();
+        // ColorPoint cp = new ColorPoint(5, 6, "blue");
+        // cp.showColorPoint();
+
+        Person p = new Student("이재문");
+        System.out.println(p.name);
+
+        Student s = (Student)p;
+
+        System.out.println(s.name);
+        s.grade = "A";
+         
+        if(p instanceof Person) {
+            System.out.println("p true");
+        }
+        if(s instanceof Person) {
+            System.out.println("s true");
+        }
+        if(p instanceof Student) {
+            System.out.println("ps true");
+        }
     }  
 
+    
 }
 
 
