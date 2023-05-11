@@ -87,12 +87,12 @@ class SmartPhone extends Calc implements PhoneInterface {
 
 public class interfaceTest {
     public static void main(String[] args) {
-        SamsungPhone phone = new SamsungPhone();
-        phone.printLogo();
-        phone.sendCall();
-        phone.receiveCall();
-        phone.flash();
-        System.out.println();
+        // SamsungPhone phone = new SamsungPhone();
+        // phone.printLogo();
+        // phone.sendCall();
+        // phone.receiveCall();
+        // phone.flash();
+        // System.out.println();
 
         SmartPhone sp = new SmartPhone();
         sp.printLogo();
@@ -100,5 +100,6 @@ public class interfaceTest {
         sp.receiveCall();
         System.out.println("3과 5를 더하면 " + sp.calculate(3, 5));
         sp.schedule();
+        
     }
 }
